@@ -4,3 +4,23 @@
     #{$_property}: $_toValue;
   }
 }
+
+
+@mixin textTypohraphy($fontSize, $lineHeight : 1, $fontWeight : 400) {
+  font-size: $fontSize + px;
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
+}
+
+
+@mixin mediaTablet {
+  @media (min-width: $bp-tablet) {
+    @content;
+  }
+}
+
+@mixin mediaDesktop {
+  @media (min-width: $bp-desktop) {
+    @content;
+  }
+}
